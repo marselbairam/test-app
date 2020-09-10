@@ -1,0 +1,80 @@
+.FlatCard {
+  margin: 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__img-link {
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      & .FlatCard__img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    max-height: 275px;
+    min-height: 220px;
+    transition: transform 0.25s ease;
+  }
+
+  &__favorite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+      background-color: #FFF !important;
+      transition: all 0.25s ease !important;
+
+      & svg {
+        fill: #F44336;
+        transform: scale(1.15);
+      }
+    }
+
+    &:hover {
+      & svg {
+        transform: scale(1.15);
+      }
+    }
+
+    & svg {
+      fill: #FFF;
+      transition: all 0.25s ease;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__title {
+    margin-bottom: 20px !important;
+  }
+
+  & .collection {
+    &:first-of-type {
+      margin-top: auto !important;
+    }
+  }
+
+  & .collection-item {
+    & span {
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+  }
+}
